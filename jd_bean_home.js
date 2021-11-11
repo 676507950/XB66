@@ -42,11 +42,11 @@ const JD_API_HOST = 'https://api.m.jd.com/';
 !(async () => {
   $.newShareCodes = []
   
-  $.authorCode = await getAuthorShareCode('https://raw.githubusercontent.com/atyvcn/updateTeam/master/shareCodes/jd/updateBeanHome.json')
+  $.authorCode = await getAuthorShareCode('D858CBF97CDA59AF678F7F2930218DDB&B8F4A1BF10B26F44BF2EB8D4B8C9754EAD1DAAB9A3E3F6CBAFDE81EEB7393333')
   if (!$.authorCode) {
-    $.http.get({url: 'https://purge.jsdelivr.net/gh/atyvcn/updateTeam@master/shareCodes/jd/updateBeanHome.json'}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
+    $.http.get({url: ''}).then((resp) => {}).catch((e) => $.log('刷新CDN异常', e));
     await $.wait(1000)
-    $.authorCode = await getAuthorShareCode('https://cdn.jsdelivr.net/gh/atyvcn/updateTeam@master/shareCodes/jd/updateBeanHome.json') || []
+    $.authorCode = await getAuthorShareCode('D858CBF97CDA59AF678F7F2930218DDB&B8F4A1BF10B26F44BF2EB8D4B8C9754EAD1DAAB9A3E3F6CBAFDE81EEB7393333') || []
   }
   if (!cookiesArr[0]) {
     $.msg($.name, '【提示】请先获取京东账号一cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/bean/signIndex.action', {"open-url": "https://bean.m.jd.com/bean/signIndex.action"});
