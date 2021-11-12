@@ -10,7 +10,7 @@ https://lzdz-isv.isvjcloud.com/dingzhi/qqxing/pasture/activity?activityId=901210
 
 【原作者 @Wenmoux】
 
-【二次修改 @zero205】
+【二次修改 @xiaobai】
 
 添加：自动喂食；
 修改：默认不做加购物车任务，优化黑号处理。By:zero205
@@ -44,7 +44,7 @@ if ($.isNode()) {
 
 const JD_API_HOST = `https://api.m.jd.com/client.action`;
 message = ""
-$.shareuuid = ["eb602b7c548f4161a0cbd2949b959811", "8c20dc3e1bfe456680db9af9063fc795"][Math.floor((Math.random() * 3))];
+$.shareuuid = ["", ""][Math.floor((Math.random() * 3))];
 !(async () => {
     if (!cookiesArr[0]) {
         $.msg($.name, '【提示】请先获取cookie\n直接使用NobyDa的京东签到获取', 'https://bean.m.jd.com/', {
@@ -52,7 +52,7 @@ $.shareuuid = ["eb602b7c548f4161a0cbd2949b959811", "8c20dc3e1bfe456680db9af9063f
         });
         return;
     }
-    console.log(`\n【原作者 @Wenmoux】\nBy:zero205\n添加：自动喂食\n修改：跳过加购物车任务，优化黑号处理\n`);
+    console.log(`\n【原作者 @Wenmoux】\nBy:xiaobai\n添加：自动喂食\n修改：跳过加购物车任务，优化黑号处理\n`);
     console.log(`\n活动入口：QQ星儿童牛奶京东自营旗舰店->我的->星系牧场\n\n懒人直达口令：16:/￥PB4H36E5f6NaPa%，星系牧场养牛牛，可获得DHA专属奶！\n\n【注意】Response code 493 (undefined)报错是正常情况，活动抽风而已，请勿反馈！！！\n`)
     for (let i = 0; i < cookiesArr.length; i++) {
         cookie = cookiesArr[i];
